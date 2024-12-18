@@ -1,0 +1,4 @@
+lane :beta do
+  scan
+end
+

@@ -11,7 +11,34 @@
 		A0981AD52B61C3D900F8670B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0981AD42B61C3D900F8670B /* ContentView.swift */; };
 		A0981AD72B61C3DA00F8670B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0981AD62B61C3DA00F8670B /* Assets.xcassets */; };
 		A0981ADA2B61C3DA00F8670B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0981AD92B61C3DA00F8670B /* Preview Assets.xcassets */; };
+		BCBE3D942D123644004ACA2E /* Fastfile in Resources */ = {isa = PBXBuildFile; fileRef = BCBE3D932D12363A004ACA2E /* Fastfile */; };
+		BCBE3D972D124922004ACA2E /* Matchfile in Sources */ = {isa = PBXBuildFile; fileRef = BCBE3D962D12491D004ACA2E /* Matchfile */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		BCBE3D912D12357D004ACA2E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = folder.rkassets;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# realitytool\n";
+		};
+		BCBE3D922D123599004ACA2E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		A0981ACF2B61C3D900F8670B /* macOSApp2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macOSApp2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +47,9 @@
 		A0981AD62B61C3DA00F8670B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0981AD92B61C3DA00F8670B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0981ADB2B61C3DA00F8670B /* macOSApp2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOSApp2.entitlements; sourceTree = "<group>"; };
+		BCBE3D932D12363A004ACA2E /* Fastfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fastfile; sourceTree = "<group>"; };
+		BCBE3D952D124144004ACA2E /* Gemfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gemfile; sourceTree = "<group>"; };
+		BCBE3D962D12491D004ACA2E /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +66,7 @@
 		A0981AC62B61C3D900F8670B = {
 			isa = PBXGroup;
 			children = (
+				BCBE3D952D124144004ACA2E /* Gemfile */,
 				A0981AD12B61C3D900F8670B /* macOSApp2 */,
 				A0981AD02B61C3D900F8670B /* Products */,
 			);
@@ -52,6 +83,8 @@
 		A0981AD12B61C3D900F8670B /* macOSApp2 */ = {
 			isa = PBXGroup;
 			children = (
+				BCBE3D962D12491D004ACA2E /* Matchfile */,
+				BCBE3D932D12363A004ACA2E /* Fastfile */,
 				A0981AD22B61C3D900F8670B /* macOSApp2App.swift */,
 				A0981AD42B61C3D900F8670B /* ContentView.swift */,
 				A0981AD62B61C3DA00F8670B /* Assets.xcassets */,
@@ -81,6 +114,8 @@
 				A0981ACD2B61C3D900F8670B /* Resources */,
 			);
 			buildRules = (
+				BCBE3D922D123599004ACA2E /* PBXBuildRule */,
+				BCBE3D912D12357D004ACA2E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -127,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBE3D942D123644004ACA2E /* Fastfile in Resources */,
 				A0981ADA2B61C3DA00F8670B /* Preview Assets.xcassets in Resources */,
 				A0981AD72B61C3DA00F8670B /* Assets.xcassets in Resources */,
 			);
@@ -140,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0981AD52B61C3D900F8670B /* ContentView.swift in Sources */,
+				BCBE3D972D124922004ACA2E /* Matchfile in Sources */,
 				A0981AD32B61C3D900F8670B /* macOSApp2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,10 +308,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSApp2/macOSApp2.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development: jigbhatt@amazon.com (R54NHZ88SZ)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macOSApp2/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = N2H57U55FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -285,6 +326,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.eshan.macOSApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -296,10 +338,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOSApp2/macOSApp2.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development: jigbhatt@amazon.com (R54NHZ88SZ)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"macOSApp2/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = N2H57U55FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -310,6 +356,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.eshan.macOSApp2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
